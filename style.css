@@ -1,0 +1,230 @@
+/* Fonts */
+
+@font-face {
+    font-family: "TTLakes Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TTLakes Regular"),
+         local("TTLakes-Regular"),  
+         url("./fonts/TTLakes-Regular.woff") format("woff"),
+         url("./fonts/TTLakes-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "TTLakes Medium";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TTLakes Medium"),
+         local("TTLakes-Medium"),  
+         url("fonts/TTLakes-Medium.woff") format("woff"),
+         url("./fonts/TTLakes-Medium.ttf") format("ttf");
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #F8F8F8;
+}
+
+body {
+    font-family: "TTLakes Medium";
+    color: #7E7E82;
+    margin: 0;
+    padding: 0;
+}
+
+/*head*/
+
+.header {
+    height: 80px;
+    background: linear-gradient(to right, #F8F8F8 25%, #FFFFFF);
+
+    border-top: 1px solid #D9FFF5;
+    display: flex;
+    align-items: center;
+}
+
+
+.header__head {
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 16px;
+    display: inline-block;
+    width: 288px;
+}
+    
+@media (min-width:768px) {
+    .header {
+        height: 56px;
+    }
+
+    .header__head {
+        margin-left: 24px;
+        width: 100%;
+    }
+}
+    
+
+
+.swiper {
+    height: 116px;
+    transition: height 1s ease-in-out;
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 116px;
+    padding: 16px;
+}
+
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    min-width: 240px;
+    max-width: 240px;
+    max-height: 72px;
+    background-color:  #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+}
+
+
+.swiper-pagination {
+    height: 8px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    --swiper-theme-color:#B5B6BC;
+    
+}
+
+.brands__logo {
+    margin-left: 16px;
+}
+
+.brands__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #FF3E79;
+    background-color: transparent;
+    margin-right: 16px;
+    position: relative;
+}
+
+.brands__link::after {
+    content: url(./images/dropdown.svg);
+    position: absolute;
+    left: 17px;
+    top: 10px;
+}
+
+
+.button {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .swiper {
+        height: 200px;
+        overflow: hidden;
+        
+    }
+
+    .swiper-total {
+        height: 380px;
+        transition: height 1s ease-in-out;
+    }
+    
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        max-width: 770px;
+        padding: 24px;
+    }
+
+    .swiper-slide {
+        min-width: 224px;
+        max-width: 224px;
+        min-height: 72px;
+        max-height: 72px;
+        margin-bottom: 16px;
+        margin-right: 24px;
+    }
+
+    .swiper-slide:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .button__show-more {
+        display: block;
+        font-family: "TTLakes Medium";
+        border: none;
+        background-color: transparent;
+        margin-left: 32px;
+
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+    }
+
+    .button__hide {
+        display: block;
+        font-family: "TTLakes Medium";
+        border: none;
+        background-color: transparent;
+        margin-left: 32px;
+
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+    }
+
+    .button__show-more::before {
+        content: url(./images/icon.svg);
+        margin-right: 17px; 
+    }
+
+    .button__hide::before {
+        content: url(./images/expand.svg);
+        margin-right: 17px;
+    }
+
+    .button__hidden {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width:1024px) {
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        max-width: 1024px;
+        padding: 24px;
+    }
+ .swiper-total {
+        height: 300px;
+    }
+    .swiper-slide:nth-child(3n) {
+        margin-right: 24px;
+    }
+
+    .swiper-slide:nth-child(4n) {
+        margin-right: 0;
+    }
+   
+}
